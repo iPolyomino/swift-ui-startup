@@ -9,8 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Image("hagi")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .overlay(
+                    Text("Hagi")
+                        .font(.system(size: 128))
+                        .foregroundColor(.white)
+                )
+            HStack {
+                Text("Hello,")
+                Text("World.")
+            }.font(.title).padding(.all, 20)
+            
+            Button("What's up?") {
+                print("hello")
+            }.foregroundColor(.green)
+        }
     }
 }
 
