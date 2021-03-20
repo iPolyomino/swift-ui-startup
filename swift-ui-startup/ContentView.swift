@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var count : Int = 0
     var body: some View {
         VStack {
             Image("hagi")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .overlay(
-                    Text("Hagi")
+                    Text(count > 0 ? "\(count)" : "Hagi")
                         .font(.system(size: 128))
                         .foregroundColor(.white)
                 )
@@ -24,7 +25,7 @@ struct ContentView: View {
             }.font(.title).padding(.all, 20)
             
             Button("What's up?") {
-                print("hello")
+                count += 1
             }.foregroundColor(.green)
         }
     }
