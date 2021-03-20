@@ -10,6 +10,9 @@ import SwiftUI
 struct ContentView: View {
     @State var count : Int = 0
     @State var isRed : Bool = false
+    @State var imageOpacity : Double = 1.0
+    @State var isActiveModal : Bool = false
+    
     var body: some View {
         VStack {
             Image("hagi")
@@ -20,6 +23,7 @@ struct ContentView: View {
                         .font(.system(size: 128))
                         .foregroundColor(isRed ? .red : .white)
                 )
+                .opacity(imageOpacity)
             HStack {
                 Text("Hello,")
                 Text("World.")
@@ -27,6 +31,15 @@ struct ContentView: View {
             
             Button("What's up?") {
                 count += 1
+                if count % 20 >= 10 {
+                    withAnimation(.easeInOut(duration: 2)) {
+                        imageOpacity = 0.0
+                    }
+                } else {
+                    withAnimation(.easeInOut(duration: 2)) {
+                        imageOpacity = 1.0
+                    }
+                }
             }.foregroundColor(.green)
             
             HStack{
@@ -44,6 +57,22 @@ struct ContentView: View {
                         .foregroundColor(.gray)
                 }
             }
+            
+            Button(action:{
+                isActiveModal = true
+            }) {
+                Text("New world")
+            }.sheet(isPresented:$isActiveModal){
+                InfoView()
+            }
+        }
+    }
+}
+
+struct InfoView: View {
+    var body: some View {
+        VStack {
+            Text("Hi")
         }
     }
 }
@@ -51,5 +80,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        InfoView()
     }
 }
