@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var count : Int = 0
+    @State var isRed : Bool = false
     var body: some View {
         VStack {
             Image("hagi")
@@ -17,7 +18,7 @@ struct ContentView: View {
                 .overlay(
                     Text(count > 0 ? "\(count)" : "Hagi")
                         .font(.system(size: 128))
-                        .foregroundColor(.white)
+                        .foregroundColor(isRed ? .red : .white)
                 )
             HStack {
                 Text("Hello,")
@@ -27,6 +28,22 @@ struct ContentView: View {
             Button("What's up?") {
                 count += 1
             }.foregroundColor(.green)
+            
+            HStack{
+                Toggle(isOn: $isRed.animation(.linear)){
+                    Text("Do you like Red?")
+                }
+                .fixedSize()
+                .padding()
+                
+                if isRed {
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.red)
+                } else {
+                    Image(systemName: "heart.slash")
+                        .foregroundColor(.gray)
+                }
+            }
         }
     }
 }
