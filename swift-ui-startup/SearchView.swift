@@ -11,9 +11,11 @@ struct SearchView: View {
     @Binding var isPresented: Bool
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        Button("Reset") {
-            isPresented = false
+        VStack{
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).padding()
+            Button("Reset") {
+                isPresented = false
+            }
         }
     }
 }

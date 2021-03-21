@@ -62,7 +62,7 @@ struct ContentView: View {
                 isActiveModal = true
             }) {
                 Text("New world")
-            }.sheet(isPresented:$isActiveModal){
+            }.fullScreenCover(isPresented:$isActiveModal){
                 SearchView(isPresented: $isActiveModal)
             }
         }
