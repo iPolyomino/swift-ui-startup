@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B328CA72607783200648549 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B328CA62607783200648549 /* SearchView.swift */; };
 		1BFB98FF26003C8A008F476E /* swift_ui_startupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFB98FE26003C8A008F476E /* swift_ui_startupApp.swift */; };
 		1BFB990126003C8A008F476E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFB990026003C8A008F476E /* ContentView.swift */; };
 		1BFB990326003C8C008F476E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BFB990226003C8C008F476E /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B328CA62607783200648549 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		1BFB98FB26003C8A008F476E /* swift-ui-startup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-ui-startup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFB98FE26003C8A008F476E /* swift_ui_startupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_ui_startupApp.swift; sourceTree = "<group>"; };
 		1BFB990026003C8A008F476E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				1BFB98FE26003C8A008F476E /* swift_ui_startupApp.swift */,
+				1B328CA62607783200648549 /* SearchView.swift */,
 				1BFB990026003C8A008F476E /* ContentView.swift */,
 				1BFB990226003C8C008F476E /* Assets.xcassets */,
 				1BFB990726003C8C008F476E /* Info.plist */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BFB990126003C8A008F476E /* ContentView.swift in Sources */,
+				1B328CA72607783200648549 /* SearchView.swift in Sources */,
 				1BFB98FF26003C8A008F476E /* swift_ui_startupApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

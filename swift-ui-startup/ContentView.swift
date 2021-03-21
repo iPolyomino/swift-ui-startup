@@ -63,23 +63,15 @@ struct ContentView: View {
             }) {
                 Text("New world")
             }.sheet(isPresented:$isActiveModal){
-                InfoView()
+                SearchView(isPresented: $isActiveModal)
             }
         }
     }
 }
 
-struct InfoView: View {
-    var body: some View {
-        VStack {
-            Text("Hi")
-        }
-    }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        InfoView()
     }
 }
