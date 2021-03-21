@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct SearchView: View {
-    @Binding var isPresented: Bool
+    @Binding var isPresented : Bool
+    @State var query : String = ""
     
     var body: some View {
         VStack{
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).padding()
+            HStack{
+                TextField("What's your name?", text: $query)
+                    .padding()
+                Button("Go"){}
+                    .padding()
+            }
+            Spacer()
+            Text("Hello, \(query == "" ? "Wrold": query)").padding()
             Button("Reset") {
                 isPresented = false
             }
+            Spacer()
         }
     }
 }
